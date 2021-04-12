@@ -40,8 +40,7 @@ for t in range(num_epochs):
     optimizer.step()  
 
 ## VALIDATION/Test SET 結果
-如何決定數值,運用VALIDATION SET 結果
-PRINT rmse 結果
+![image](https://github.com/DC07OCT/DSAI_HW2/blob/main/2.png)
 
 ## 如何判斷ACTION
 *當價格不變時我prefer往狀態0變
