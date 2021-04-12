@@ -20,7 +20,7 @@ hidden_dim = 32#代表一層hidden layer有32個LSTM neuron
 num_layers = 2#2層hidden layer  
 output_dim = 1 #最後要predict的日子是幾天  
 num_epochs = 15000#經過試驗得到的  
-
+![image](https://github.com/DC07OCT/DSAI_HW2/blob/main/1.png)
 模型  
 ## TRAINING MODEL PROCESS
 model = LSTM(input_dim=input_dim, hidden_dim=hidden_dim, output_dim=output_dim, num_layers=num_layers)  
