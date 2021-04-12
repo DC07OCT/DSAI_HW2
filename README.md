@@ -39,17 +39,17 @@ for t in range(num_epochs):
     loss.backward()  
     optimizer.step()  
 
-##VALIDATION/Test SET 結果
+## VALIDATION/Test SET 結果
 如何決定數值,運用VALIDATION SET 結果
 PRINT rmse 結果
 
 ## 如何判斷ACTION
 *當價格不變時我prefer往狀態0變
 
-分析所有可能情況
-1.now_state=-1,它的action只可能為0 or +1
-如果預測結果是漲價(或相同)就+1,反之+0
-3.now_state=1,它的action只可能為0 or -1
-如果預測結果是跌價(或相同)就-1,反之+0
-5.now_state=0,它的action可能為0 or -1 or 1
-如果預測結果是跌價就-1,相同+0,漲價+1
+分析所有可能情況  
+1.now_state=-1,它的action只可能為0 or +1  
+如果預測結果是漲價(或相同)就+1,反之+0  
+3.now_state=1,它的action只可能為0 or -1  
+如果預測結果是跌價(或相同)就-1,反之+0  
+5.now_state=0,它的action可能為0 or -1 or 1  
+如果預測結果是跌價就-1,相同+0,漲價+1  
