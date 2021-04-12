@@ -80,13 +80,13 @@ if __name__ == '__main__':
     for index in range(len(test_data_raw) - 1):
 
         if index < (lookback - 1):
-            if index == 0:
+            if index == 0:#第一筆完全仰賴training set資料
                 x_test.append(train_data_raw[(index - lookback + 1):])
             else:
-                temp = np.vstack((train_data_raw[(index - lookback + 1):], test_data_raw[:index]))
+                temp = np.vstack((train_data_raw[(index - lookback + 1):], test_data_raw[:index]))#合併numpy array
                 x_test.append(temp)
         else:
-            x_test.append(test_data_raw[index - lookback + 1:index])  # test data用到training data的後(lookback-1)筆
+            x_test.append(test_data_raw[(index - lookback + 1):index])  # test data用到training data的後(lookback-1)筆
         y_test.append(test_data['open'][index])
 
     x_train = np.array(x_train)  # training set 的 input包(19天) 集合
@@ -201,7 +201,7 @@ if __name__ == '__main__':
     # 寫入csv file
     import csv
     now = 0
-    with open('output2.csv', 'w', newline="") as output_file:
+    with open('output.csv', 'w', newline="") as output_file:
         writer = csv.writer(output_file)
         for row in range(len(x_test)):
             if (row - 1) < 0:  # 第一筆的前一天值要考慮到training set
