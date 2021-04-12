@@ -192,7 +192,7 @@ if __name__ == '__main__':
         else:
             if tomorrow_pred > today_open:
                 return 1, 1
-            elif tomorrow_pred > today_open:
+            elif tomorrow_pred == today_open:
                 return 0, 0
             else:
                 return -1, -1
