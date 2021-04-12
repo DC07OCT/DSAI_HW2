@@ -1,8 +1,8 @@
 # Stock Prediction using LSTM
 ## 如何執行
-pip install -r requirements.txt
-change directory to the trader.py file
-python trader.py --training training.csv --testing testing.csv --output output.csv
+pip install -r requirements.txt  
+change directory to the trader.py file  
+python trader.py --training training.csv --testing testing.csv --output output.csv  
 ## requirements
   	python==3.8.5  
 	numpy==1.19.2  
